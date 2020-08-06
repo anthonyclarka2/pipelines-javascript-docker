@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: aca2pipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: aca2pipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: aca2pipelinesjavascriptdocker 
+          image: aca2containerregistry.azurecr.io/aca2pipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
